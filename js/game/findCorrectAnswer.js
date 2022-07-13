@@ -1,6 +1,7 @@
 import { Playing } from "./startGame.js";
 import { addStar } from "./changePlayFeature.js";
 import ResultGame from "./resultGame.js";
+import SetStatistic from "../statistic/setStatistic.js";
 export default function FindCorrectAnswer(wordObj) {
     let k = +localStorage.getItem('playingCardNumber');
     let cards = JSON.parse(localStorage.getItem("playingCards"));
@@ -21,6 +22,7 @@ export default function FindCorrectAnswer(wordObj) {
         imageSrc = './assets/img/star.svg';
         addStar(audioSrc, imageSrc);
         wrongWordArr.push(wordObj);
+        SetStatistic(wordObj, 'wrong');
         localStorage.setItem('wrongWordArr', JSON.stringify(wrongWordArr));
     }
     return answer;

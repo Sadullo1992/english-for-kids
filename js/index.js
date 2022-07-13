@@ -16,7 +16,11 @@ let statisticData = JSON.parse(localStorage.getItem("statisticData"));
 if(statisticData === null) {
     StatisticData();
 }
-
+if(Array.isArray(statisticData)) {
+   if(statisticData.length !== cards.length - 1) {
+    StatisticData();
+   }
+}
 
 window.addEventListener('load', () => {
     window.location = "#";    

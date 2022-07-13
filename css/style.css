@@ -347,7 +347,7 @@ input:checked+.slider:after {
 .btn-reset {
     color: #000;
     background-color: #fff;
-    box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 7px 15px rgba(0, 0, 0, 0.1);
 }
 .table-container {
     width: 100%;
@@ -357,11 +357,13 @@ table {
     background-color: #fff;     
     border-collapse: collapse;
     overflow-x: auto;
-    box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.3);
 }
 table, th, td {
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: 1px solid #ddd;
     padding: 5px 15px;
+}
+tr:hover {
+    background-color: #ddd;
 }
 .th {
     font-weight: 500;

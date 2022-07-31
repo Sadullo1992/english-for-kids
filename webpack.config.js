@@ -1,18 +1,13 @@
-// eslint-disable-next-line
 const path = require('path');
 
-// eslint-disable-next-line
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// eslint-disable-next-line
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
-// eslint-disable-next-line
 module.exports = {
 
   entry: './js/index.js',
   
   output: {
-    // eslint-disable-next-line
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
     filename: 'bundle.js'
@@ -40,8 +35,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/,
         use: [
                {
-                 loader: "file-loader",
-  
+                 loader: "file-loader",  
                  options: {
                    outputPath: 'img'
                  }
